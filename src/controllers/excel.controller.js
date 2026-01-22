@@ -5,7 +5,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 
 // URL de la API de Google Apps Script
-const GOOGLE_API_URL = 'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjdwdUlpVRJkQIyAWxMt73XXRLob2EDydik9Wi13Pa77C5HUfMyq4Ri-GIgfK-_GEyBFm-53V2L4VzIK1ceDdP86AJWwgzcH3QE4BERiTnLajZIFb-QpzgAv1I51L9TqYekWiCvq6uPDAgflP7JgF0XFWcGFARnHEXcrdqM5epu80FuIs69QXsEJKbGDnIuDCzgHtdgWoLUw_bCxakn91YC1tcMvvPhazTzei4J81cIVO1zGIWfZW3uOAV_LiSM3KwGvE9eo_CxYTH035LnZY87XWk9Vx22rdGR5cP8&lib=MARJ3-rf-gxuPI0cvVl5kdFLD6i7dHDUc';
+const GOOGLE_API_URL = 'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLgoeizKrbJcdmX6PLA--xiELvSr5QYthj8G14BAhJl77OFcy0E0eAX4XObUNWeVlP1JKVatMOMxuxjWa3PIdD4wPuxm3kylW0NMouDoYXnCoISr8Hk2Z1CsgXap_DHJem6p4yOtCtwUiFLTOle-M3ai87IAJj-baiApnHX-N1xOUl9VLZ-f3fRjbFaA3vmwTzsqBF6LiBzla81qg2gX8UtN7rMjAAbipKEkCAcueEJ-z_xhY7UOkmF_IOIbisKJIW1dm64iQl9URaYBmj-EC6h6qqWO307knm9cPMak&lib=MARJ3-rf-gxuPI0cvVl5kdFLD6i7dHDUc';
 
 /**
  * Obtiene productos desde la API de Google Apps Script
