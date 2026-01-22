@@ -22,7 +22,7 @@ const fetchProductsFromAPI = async () => {
         });
 
         if (response.data && response.data.status === 'ok' && Array.isArray(response.data.data)) {
-            console.log(`Se obtuvieron ${response.data.count} productos de la API`);
+            //console.log(`Se obtuvieron ${response.data.count} productos de la API`);
 
             // Mapear los datos de la API al formato que espera la base de datos
             const products = response.data.data.map(item => ({
@@ -35,9 +35,10 @@ const fetchProductsFromAPI = async () => {
                 precio_minorista: parseFloat(item['Precio Final']) || 0,
                 precio_especial: parseFloat(item['Precio']) || 0,
                 precio_mayorista: parseFloat(item['Precio Mayorista']) || 0,
-                categoria: item['Id Rubro'] || '',
+                categoria: item['Rubro'] || '',
                 proveedor: '', // No existe en la API
                 ubicacion: '', // No existe en la API
+                estatus: 2, // No existe en la API
                 AD: item['Estado'] === 'Activo' ? 1 : 0 // Convertir estado a número
             }));
 
