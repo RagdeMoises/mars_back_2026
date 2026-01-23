@@ -13,7 +13,7 @@ const GOOGLE_API_URL = 'https://script.googleusercontent.com/macros/echo?user_co
  */
 const fetchProductsFromAPI = async () => {
     try {
-        console.log('Obteniendo productos desde la API de Google...');
+        //console.log('Obteniendo productos desde la API de Google...');
         const response = await axios.get(GOOGLE_API_URL, {
             timeout: 30000, // 30 segundos timeout
             headers: {
@@ -35,7 +35,7 @@ const fetchProductsFromAPI = async () => {
                 precio_minorista: parseFloat(item['Precio Final']) || 0,
                 precio_especial: parseFloat(item['Precio']) || 0,
                 precio_mayorista: parseFloat(item['Precio Mayorista']) || 0,
-                categoria: item['Id Rubro'] || '',
+                categoria: item['Rubro'] || '',
                 proveedor: '', // No existe en la API
                 ubicacion: '', // No existe en la API
                 AD: item['Estado'] === 'Activo' ? 1 : 0 // Convertir estado a número
