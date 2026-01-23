@@ -38,6 +38,7 @@ const fetchProductsFromAPI = async () => {
                 categoria: item['Rubro'] || '',
                 proveedor: '', // No existe en la API
                 ubicacion: '', // No existe en la API
+                estatus: item['Estatus'] || 0,
                 AD: item['Estado'] === 'Activo' ? 1 : 0 // Convertir estado a número
             }));
 
