@@ -94,7 +94,7 @@ const saveToDatabase = async (products) => {
                     product.categoria,
                     product.proveedor,
                     product.ubicacion,
-                    product.AD
+                    product.estatus
                 ]
             );
         }
